@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title data-i18n="page.projects.title">Projects — Baxrom Developer</title>
+    <link rel="icon" href="./img/fovicon.svg" type="image/svg+xml" />
+
+    <meta
+      name="description"
+      data-i18n-content="page.projects.description"
+      content="Frontend projects by Baxrom built with HTML, CSS, JavaScript, APIs and localStorage."
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/media.css" />
+    <link rel="stylesheet" href="./style/projects.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <a href="./index.html" class="logo">baxrom<span>.</span></a>
+
+        <div class="header__right">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li>
+                <a href="./about.html" class="list__link" data-i18n="nav.about">
+                  Обо мне
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="./project.html"
+                  class="list__link"
+                  data-i18n="nav.projects"
+                >
+                  Проекты
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="./mini-projects.html"
+                  class="list__link"
+                  data-i18n="nav.miniProjects"
+                >
+                  Мини-проекты
+                </a>
+              </li>
+
+              <li>
+                <a href="./my-ui.html" class="list__link" data-i18n="nav.myUi">
+                  My UI
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="./contact.html"
+                  class="list__link"
+                  data-i18n="nav.contact"
+                >
+                  Контакты
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav__controls">
+              <div class="languages">
+                <button
+                  class="language__button active"
+                  data-lang="ru"
+                  type="button"
+                >
+                  RU
+                </button>
+
+                <button class="language__button" data-lang="uz" type="button">
+                  UZ
+                </button>
+
+                <button class="language__button" data-lang="en" type="button">
+                  EN
+                </button>
+              </div>
+
+              <button
+                class="theme-toggle"
+                id="theme-toggle"
+                type="button"
+                data-i18n-aria-label="common.theme"
+                aria-label="Сменить тему"
+              >
+                <span class="theme-toggle__icon">☀</span>
+                <span class="theme-toggle__thumb"></span>
+                <span class="theme-toggle__icon">☾</span>
+              </button>
+            </div>
+          </nav>
+
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            data-i18n-aria-label="common.openMenu"
+            aria-label="Открыть меню"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="projects-hero">
+        <div class="container">
+          <div class="projects-hero__content">
+            <a
+              href="./index.html"
+              class="projects-hero__back"
+              data-i18n="projectsPage.back"
+            >
+              ← На главную
+            </a>
+            <p class="projects-hero__eyebrow" data-i18n="projectsPage.eyebrow">
+              PROJECTS
+            </p>
+
+            <h1 class="projects-hero__title" data-i18n="projectsPage.title">
+              Мои проекты
+            </h1>
+
+            <p
+              class="projects-hero__description"
+              data-i18n="projectsPage.description"
+            >
+              Здесь собраны мои основные проекты, в которых я практикую
+              JavaScript, работу с API, localStorage и создание современных
+              интерфейсов.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-projects">
+        <div class="container">
+          <div class="featured-projects__header">
+            <p
+              class="featured-projects__eyebrow"
+              data-i18n="projectsPage.featuredLabel"
+            >
+              FEATURED PROJECTS
+            </p>
+
+            <h2
+              class="featured-projects__title"
+              data-i18n="projectsPage.featuredTitle"
+            >
+              Основные проекты
+            </h2>
+          </div>
+          <div class="featured-projects__list">
+            <article class="featured-project">
+              <div class="featured-project__image">
+                <img src="./img/finance.png" alt="Finance Dashboard" />
+              </div>
+
+              <div class="featured-project__content">
+                <span class="featured-project__number">01</span>
+
+                <h3 class="featured-project__title">Finance Dashboard</h3>
+
+                <p
+                  class="featured-project__description"
+                  data-i18n="projectsPage.finance.description"
+                >
+                  Интерактивный финансовый dashboard для управления доходами,
+                  расходами и статистикой.
+                </p>
+
+                <div class="featured-project__stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>LocalStorage</span>
+                </div>
+
+                <a
+                  href="./New 10 Propjct/5. 📊 Finance Dashboard/index.html"
+                  class="featured-project__link"
+                  data-i18n="projects.details"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Подробнее →
+                </a>
+              </div>
+            </article>
+
+            <article class="featured-project featured-project--reverse">
+              <div class="featured-project__image">
+                <img src="./img/movie.png" alt="Movie App" />
+              </div>
+
+              <div class="featured-project__content">
+                <span class="featured-project__number">02</span>
+
+                <h3 class="featured-project__title">Movie App</h3>
+
+                <p
+                  class="featured-project__description"
+                  data-i18n="projectsPage.movie.description"
+                >
+                  Приложение для поиска фильмов через API с рейтингами,
+                  подробной информацией и избранным.
+                </p>
+
+                <div class="featured-project__stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>API</span>
+                  <span>LocalStorage</span>
+                </div>
+
+                <a
+                  href="./New 10 Propjct/6. 🎬 Movie App с API/index.html"
+                  class="featured-project__link"
+                  data-i18n="projects.details"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Подробнее →
+                </a>
+              </div>
+            </article>
+            <article class="featured-project">
+              <div class="featured-project__image">
+                <img src="./img/ecommerce.png" alt="Mini E-commerce" />
+              </div>
+
+              <div class="featured-project__content">
+                <span class="featured-project__number">03</span>
+
+                <h3 class="featured-project__title">Mini E-commerce</h3>
+
+                <p
+                  class="featured-project__description"
+                  data-i18n="projectsPage.ecommerce.description"
+                >
+                  Каталог товаров с поиском, фильтрацией, сортировкой, корзиной
+                  и сохранением данных.
+                </p>
+
+                <div class="featured-project__stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>LocalStorage</span>
+                </div>
+
+                <a
+                  href="./New 10 Propjct/4. 🛒 Mini E-commerce/index.html"
+                  class="featured-project__link"
+                  data-i18n="projects.details"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Подробнее →
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="all-projects">
+        <div class="container">
+          <div class="all-projects__header">
+            <p class="all-projects__eyebrow" data-i18n="projectsPage.allLabel">
+              ALL PROJECTS
+            </p>
+
+            <h2 class="all-projects__title" data-i18n="projectsPage.allTitle">
+              Другие проекты
+            </h2>
+          </div>
+
+          <div class="all-projects__grid">
+            <article class="project-small-card">
+              <span class="project-small-card__number">04</span>
+
+              <h3 class="project-small-card__title">Expense Tracker</h3>
+
+              <p
+                class="project-small-card__description"
+                data-i18n="projectsPage.expense.description"
+              >
+                Учёт доходов и расходов с категориями, балансом, статистикой и
+                сохранением данных.
+              </p>
+
+              <div class="project-small-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>LocalStorage</span>
+              </div>
+
+              <a
+                href="./New 10 Propjct/1. 💰 Expense Tracker/index.html"
+                class="project-small-card__link"
+                data-i18n="projects.details"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Подробнее →
+              </a>
+            </article>
+
+            <article class="project-small-card">
+              <span class="project-small-card__number">05</span>
+
+              <h3 class="project-small-card__title">Notes App</h3>
+
+              <p
+                class="project-small-card__description"
+                data-i18n="projectsPage.notes.description"
+              >
+                Приложение для создания, редактирования, поиска и организации
+                заметок.
+              </p>
+
+              <div class="project-small-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>LocalStorage</span>
+              </div>
+
+              <a
+                href="./New 10 Propjct/2. 📝 Notes App с папками/index.html"
+                class="project-small-card__link"
+                data-i18n="projects.details"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Подробнее →
+              </a>
+            </article>
+
+            <article class="project-small-card">
+              <span class="project-small-card__number">06</span>
+
+              <h3 class="project-small-card__title">Weather Dashboard</h3>
+
+              <p
+                class="project-small-card__description"
+                data-i18n="projectsPage.weather.description"
+              >
+                Расширенное приложение погоды с прогнозом, несколькими городами
+                и API.
+              </p>
+
+              <div class="project-small-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>API</span>
+              </div>
+
+              <a
+                href="./New 10 Propjct/3. 🌤️ Weather Dashboard/index.html"
+                class="project-small-card__link"
+                data-i18n="projects.details"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Подробнее →
+              </a>
+            </article>
+
+            <article class="project-small-card">
+              <span class="project-small-card__number">07</span>
+
+              <h3 class="project-small-card__title">GitHub Profile Finder</h3>
+
+              <p
+                class="project-small-card__description"
+                data-i18n="projectsPage.github.description"
+              >
+                Поиск GitHub-пользователей с профилем, репозиториями и
+                статистикой.
+              </p>
+
+              <div class="project-small-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>GitHub API</span>
+              </div>
+
+              <a
+                href="./New 10 Propjct/7. 🌐 GitHub Profile Finder/index.html"
+                class="project-small-card__link"
+                data-i18n="projects.details"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Подробнее →
+              </a>
+            </article>
+
+            <article class="project-small-card">
+              <span class="project-small-card__number">08</span>
+
+              <h3 class="project-small-card__title">Kanban Board</h3>
+
+              <p
+                class="project-small-card__description"
+                data-i18n="projectsPage.kanban.description"
+              >
+                Доска задач с колонками To Do, In Progress и Done и сохранением
+                данных.
+              </p>
+
+              <div class="project-small-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Drag & Drop</span>
+              </div>
+
+              <a
+                href="./New 10 Propjct/8. 📌 Kanban Board/index.html"
+                class="project-small-card__link"
+                data-i18n="projects.details"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Подробнее →
+              </a>
+            </article>
+
+            <article class="project-small-card">
+              <span class="project-small-card__number">09</span>
+
+              <h3 class="project-small-card__title">Quiz Builder</h3>
+
+              <p
+                class="project-small-card__description"
+                data-i18n="projectsPage.quizBuilder.description"
+              >
+                Конструктор тестов, где пользователь создаёт вопросы, ответы и
+                сохраняет собственные тесты.
+              </p>
+
+              <div class="project-small-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>LocalStorage</span>
+              </div>
+
+              <a
+                href="./New 10 Propjct/9. 🧠 Quiz Builder/index.html"
+                class="project-small-card__link"
+                data-i18n="projects.details"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Подробнее →
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects-cta">
+        <div class="container">
+          <div class="projects-cta__inner">
+            <div class="projects-cta__content">
+              <p
+                class="projects-cta__eyebrow"
+                data-i18n="projectsPage.ctaLabel"
+              >
+                LET'S WORK TOGETHER
+              </p>
+
+              <h2 class="projects-cta__title" data-i18n="projectsPage.ctaTitle">
+                Есть идея для проекта?
+              </h2>
+
+              <p
+                class="projects-cta__description"
+                data-i18n="projectsPage.ctaDescription"
+              >
+                Буду рад обсудить интересную идею и попробовать создать
+                что-нибудь вместе.
+              </p>
+            </div>
+
+            <a
+              href="./index.html#contact"
+              class="projects-cta__button"
+              data-i18n="projectsPage.ctaButton"
+            >
+              Связаться со мной →
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a href="./index.html" class="footer__logo"> baxrom<span>.</span> </a>
+
+          <p class="footer__text" data-i18n="common.role">Frontend Developer</p>
+
+          <div class="footer__links">
+            <a href="./project.html" data-i18n="nav.projects">Проекты </a>
+
+            <a href="./mini-projects.html" data-i18n="nav.miniProjects">
+              Мини-проекты
+            </a>
+
+            <a href="./my-ui.html" data-i18n="nav.myUi"> My UI </a>
+
+            <a href="./about.html" data-i18n="nav.about"> Обо мне </a>
+
+            <a href="./contact.html" data-i18n="nav.contact"> Контакты </a>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© 2026 Baxrom Developer</p>
+
+          <a href="#" class="footer__top" data-i18n="footer.top"> Наверх ↑ </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script/i18n.js"></script>
+    <script src="./script/app.js"></script>
+  </body>
+</html>

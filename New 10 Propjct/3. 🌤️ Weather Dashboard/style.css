@@ -1,0 +1,525 @@
+/* Общие цвета: меняй здесь, чтобы обновить всю тему. */
+:root {
+    --background: #0c1525;
+    --surface: #152136;
+    --border: #2d3b51;
+    --text: #edf2fa;
+    --muted: #a1b0c5;
+    --accent: #c7e791;
+    --accent-text: #203522;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+a,
+button,
+input {
+    -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+    outline: 3px solid #8cbfff;
+    outline-offset: 4px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Верхняя панель */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-height: 84px;
+    padding: 16px 5%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.header-label {
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.unit {
+    padding: 8px 12px;
+    background: var(--accent);
+    color: var(--accent-text);
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+/* Основная сетка: избранное слева, погода справа. */
+.dashboard {
+    display: grid;
+    grid-template-columns: 270px minmax(0, 1fr);
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    padding: 36px 24px;
+    border-right: 1px solid var(--border);
+}
+
+.sidebar h2 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.main {
+    min-width: 0;
+    padding: 36px 40px;
+}
+
+.eyebrow {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(28px, 4vw, 38px);
+    letter-spacing: -1px;
+    margin-top: 6px;
+}
+
+.page-heading {
+    margin-bottom: 26px;
+}
+
+/* Поиск */
+.search-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.search-row {
+    display: flex;
+    gap: 12px;
+}
+
+.search-row input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    background: var(--surface);
+}
+
+.search-row input::placeholder {
+    color: var(--muted);
+}
+
+.button {
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-weight: 600;
+}
+
+.button-primary {
+    background: var(--accent);
+    color: var(--accent-text);
+}
+
+.button-primary:hover {
+    background: #d7f2aa;
+}
+
+.status-message {
+    margin: 16px 0 22px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.status-message.is-error {
+    color: #ffb4ab;
+}
+
+/* Карточка текущей погоды */
+.current-weather {
+    padding: 28px 32px;
+    background: var(--accent);
+    color: var(--accent-text);
+    border-radius: 20px;
+}
+
+.weather-heading,
+.weather-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.current-weather .eyebrow {
+    color: #476039;
+}
+
+.current-weather h2 {
+    font-size: 28px;
+    margin-top: 5px;
+    overflow-wrap: anywhere;
+}
+
+.weather-date {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #476039;
+}
+
+.button-favorite {
+    flex-shrink: 0;
+    background: transparent;
+    color: var(--accent-text);
+    border-color: #78985c;
+    font-size: 14px;
+}
+
+.button-favorite:not(:disabled):hover {
+    background: #b5d67d;
+}
+
+.weather-summary {
+    margin-top: 22px;
+}
+
+.temperature {
+    font-size: clamp(64px, 8vw, 96px);
+    line-height: 1.1;
+    letter-spacing: -4px;
+}
+
+.feels-like {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #476039;
+}
+
+.weather-condition {
+    text-align: center;
+}
+
+.weather-icon {
+    display: block;
+    font-size: 64px;
+    line-height: 1.2;
+}
+
+.weather-condition p {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Подробности и прогноз */
+.section-title {
+    margin: 28px 0 16px;
+    font-size: 20px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.detail-card {
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.detail-card h3 {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.detail-card p {
+    margin-top: 16px;
+    font-size: 28px;
+}
+
+.measurement {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.empty-message {
+    padding: 20px;
+    border: 1px dashed var(--border);
+    border-radius: 14px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.favorites-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.forecast-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+}
+
+/* Эти классы используем позже для элементов, созданных в JavaScript. */
+.favorite-city {
+    width: 100%;
+    padding: 16px;
+    text-align: left;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.favorite-city:hover,
+.favorite-city.is-active {
+    border-color: var(--accent);
+}
+
+.forecast-card {
+    padding: 18px 12px;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.forecast-day {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.forecast-icon {
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+.forecast-temperature {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer {
+    margin-top: 32px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* Планшеты */
+@media (max-width: 1000px) {
+    .dashboard {
+        grid-template-columns: 230px minmax(0, 1fr);
+    }
+
+    .main {
+        padding: 28px 24px;
+    }
+
+    .details-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .weather-heading {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+/* Телефоны */
+@media (max-width: 700px) {
+    .header {
+        min-height: 72px;
+        padding: 12px 20px;
+    }
+
+    .header-label {
+        display: none;
+    }
+
+    .unit {
+        margin-left: auto;
+    }
+
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main {
+        order: -1;
+        padding: 24px 20px;
+    }
+
+    .sidebar {
+        border-right: 0;
+        border-top: 1px solid var(--border);
+        padding: 24px 20px;
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    .current-weather {
+        padding: 24px;
+    }
+
+    .weather-summary {
+        flex-wrap: wrap;
+    }
+
+    .weather-icon {
+        font-size: 48px;
+    }
+
+    .detail-card {
+        padding: 18px;
+    }
+}
+
+.favorite-row {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.favorite-row .favorite-city {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    overflow-wrap: anywhere;
+}
+
+.delete-favorite {
+    flex-shrink: 0;
+    padding: 10px;
+    border: 1px solid #68434c;
+    border-radius: 12px;
+    background: transparent;
+    color: #ffb4ab;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.delete-favorite:hover {
+    background: #39232f;
+    border-color: #ffb4ab;
+}
+
+.delete-favorite:focus-visible {
+    outline: 2px solid #ffb4ab;
+    outline-offset: 3px;
+}
+
+#city-suggestions {
+    list-style: none;
+    margin: 10px 0 20px;
+    padding: 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+#city-suggestions[hidden] {
+    display: none;
+}
+
+#city-suggestions li+li {
+    border-top: 1px solid var(--border);
+}
+
+#city-suggestions button {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    text-align: left;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+}
+
+#city-suggestions button:hover {
+    background: #243549;
+}
+
+#city-suggestions button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+}
+
+.forecast-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.forecast-card p {
+    margin-top: 8px;
+    line-height: 1.5;
+}

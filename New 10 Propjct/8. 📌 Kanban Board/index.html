@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kanban Board</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <header class="header">
+        <div>
+          <p class="header__label">Task Management</p>
+          <h1>Kanban Board</h1>
+          <p class="header__description">
+            Organize your tasks and track your progress.
+          </p>
+        </div>
+
+        <button class="add-task-button" id="open-task-form">+ Add task</button>
+      </header>
+
+      <main class="board">
+        <!-- TO DO -->
+        <section class="column">
+          <div class="column__header">
+            <div class="column__title">
+              <span class="column__dot column__dot--todo"></span>
+              <h2>To Do</h2>
+            </div>
+
+            <span class="column__count" id="todo-count">0</span>
+          </div>
+
+          <div class="tasks" id="todo-tasks" data-status="todo"></div>
+        </section>
+
+        <!-- IN PROGRESS -->
+        <section class="column">
+          <div class="column__header">
+            <div class="column__title">
+              <span class="column__dot column__dot--progress"></span>
+              <h2>In Progress</h2>
+            </div>
+
+            <span class="column__count" id="progress-count">0</span>
+          </div>
+
+          <div class="tasks" id="progress-tasks" data-status="progress"></div>
+        </section>
+
+        <!-- DONE -->
+        <section class="column">
+          <div class="column__header">
+            <div class="column__title">
+              <span class="column__dot column__dot--done"></span>
+              <h2>Done</h2>
+            </div>
+
+            <span class="column__count" id="done-count">0</span>
+          </div>
+
+          <div class="tasks" id="done-tasks" data-status="done"></div>
+        </section>
+      </main>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal hidden" id="task-modal">
+      <div class="modal__backdrop" id="modal-backdrop"></div>
+
+      <div class="modal__content">
+        <div class="modal__header">
+          <div>
+            <p class="modal__label">New task</p>
+            <h2>Create task</h2>
+          </div>
+
+          <button class="modal__close" id="close-task-form" type="button">
+            ×
+          </button>
+        </div>
+
+        <form class="task-form" id="task-form">
+          <div class="form-group">
+            <label for="task-title">Title</label>
+
+            <input
+              type="text"
+              id="task-title"
+              placeholder="Enter task title"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="task-description">Description</label>
+
+            <textarea
+              id="task-description"
+              placeholder="Describe your task"
+              rows="4"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="task-status">Status</label>
+
+            <select id="task-status">
+              <option value="todo">To Do</option>
+              <option value="progress">In Progress</option>
+              <option value="done">Done</option>
+            </select>
+          </div>
+
+          <button class="form-button" type="submit">Create task</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

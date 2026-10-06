@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    padding: 40px 20px;
+
+    background: #f1f3f5;
+    color: #222222;
+
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 28px;
+
+    text-align: center;
+
+    font-size: 34px;
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.projectInput {
+    width: 100%;
+    height: 46px;
+
+    margin-bottom: 10px;
+    padding: 0 14px;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #222222;
+
+    font-size: 15px;
+    outline: none;
+}
+
+.projectInput:focus {
+    border-color: #444444;
+}
+
+.addBtn {
+    width: 100%;
+    min-height: 44px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #222222;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.addBtn:hover {
+    background: #444444;
+    transform: translateY(-2px);
+}
+
+/* Progress */
+
+.progressBar {
+    padding: 18px;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+.percent {
+    margin-bottom: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.progressTrack {
+    width: 100%;
+    height: 14px;
+
+    overflow: hidden;
+
+    background: #e2e2e2;
+
+    border-radius: 20px;
+}
+
+.progressFill {
+    width: 0%;
+    height: 100%;
+
+    background: #3f7d5a;
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+/* Statistics */
+
+.formStatus {
+    margin-bottom: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.formStatus p {
+    padding: 14px;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Project list */
+
+.projectList {
+    display: grid;
+    gap: 12px;
+}
+
+.projectList>div {
+    padding: 18px;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+.projectList h3 {
+    margin-bottom: 12px;
+
+    font-size: 19px;
+}
+
+.projectList button {
+    min-height: 38px;
+
+    margin-right: 8px;
+    margin-top: 8px;
+    padding: 0 14px;
+
+    border: none;
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.projectList button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* первая кнопка статуса */
+.projectList button:first-of-type {
+    background: #3f7d5a;
+}
+
+/* удаление */
+.projectList button:last-of-type {
+    background: #c8564f;
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .formStatus {
+        grid-template-columns: 1fr;
+    }
+
+    .projectList button {
+        width: 100%;
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Movie Details</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo"> Movie<span>App</span> </a>
+
+        <div class="header__actions">
+          <a href="index.html?view=favorites" class="favorites-button">
+            Favorites
+            <span id="favorites-count">0</span>
+          </a>
+
+          <a href="index.html" class="back-button"> ← Back </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="movie-details">
+        <div class="container">
+          <div class="message hidden" id="movie-loading">
+            <div class="loader"></div>
+            <p>Loading movie...</p>
+          </div>
+
+          <div class="message hidden" id="movie-error">
+            <h3>Movie not found</h3>
+            <p>Please go back and try again.</p>
+          </div>
+
+          <div class="movie-details__wrapper" id="movie-details"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="movie.js"></script>
+  </body>
+</html>

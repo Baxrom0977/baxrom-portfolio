@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Трекер доходов и расходов" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+
+  <body class="">
+    <main class="container">
+      <header class="header">
+        <div>
+          <h1>Expense Tracker</h1>
+          <p>Контролируй доходы и расходы</p>
+        </div>
+
+        <button class="themeBtn" type="button">☀️</button>
+      </header>
+
+      <section class="balance">
+        <p>Общий баланс</p>
+        <h2 class="balanceAmount">$0.00</h2>
+
+        <div class="balanceStats">
+          <div class="income">
+            <span>Доходы</span>
+            <h3 class="incomeAmount">$0.00</h3>
+          </div>
+
+          <div class="expense">
+            <span>Расходы</span>
+            <h3 class="expenseAmount">$0.00</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="addTransaction">
+        <h2>Добавить операцию</h2>
+
+        <form class="form">
+          <input
+            class="descriptionInput"
+            type="text"
+            placeholder="Описание, например: продукты"
+            required
+          />
+
+          <input
+            class="amountInput"
+            type="number"
+            min="0.01"
+            step="0.01"
+            placeholder="Сумма"
+            required
+          />
+
+          <select class="typeSelect">
+            <option value="income">Доход</option>
+            <option value="expense">Расход</option>
+          </select>
+
+          <select class="categorySelect">
+            <option value="food">Еда</option>
+            <option value="transport">Транспорт</option>
+            <option value="shopping">Покупки</option>
+            <option value="salary">Зарплата</option>
+            <option value="other">Другое</option>
+          </select>
+
+          <input class="dateInput" type="date" required />
+
+          <button class="addBtn" type="submit">
+            Добавить операцию
+          </button>
+        </form>
+      </section>
+
+      <section class="filters">
+        <input
+          class="searchInput"
+          type="search"
+          placeholder="Поиск операций..."
+        />
+
+        <select class="filterType">
+          <option value="all">Все операции</option>
+          <option value="income">Доходы</option>
+          <option value="expense">Расходы</option>
+        </select>
+      </section>
+
+      <section class="transactions">
+        <div class="transactionHeader">
+          <h2>Последние операции</h2>
+          <button class="deleteAllBtn" type="button">Удалить всё</button>
+        </div>
+
+        <div class="transactionList"></div>
+
+        <p class="emptyMessage">
+          Операций пока нет. Добавь первую через форму выше.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>Movie App</title>
+
+      <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+      <header class="header">
+        <div class="container header__inner">
+          <a href="index.html" class="logo"> Movie<span>App</span> </a>
+
+          <button class="favorites-button" id="favorites-button">
+            Favorites
+            <span id="favorites-count">0</span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="container">
+            <div class="hero__content">
+              <p class="hero__subtitle">Find your next favorite movie</p>
+
+              <h1 class="hero__title">
+                Search movies
+                <span>from around the world</span>
+              </h1>
+
+              <p class="hero__description">
+                Search for movies, check ratings, read descriptions and save your
+                favorites.
+              </p>
+
+              <form class="search" id="search-form">
+                <input
+                  type="search"
+                  id="search-input"
+                  class="search__input"
+                  placeholder="Search movie..."
+                  autocomplete="off"
+                />
+
+                <button class="search__button" type="submit">Search</button>
+                <select id="type-filter" class="type-filter">
+                  <option value="">All</option>
+                  <option value="movie">Movies</option>
+                  <option value="series">Series</option>
+                </select>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="movies-section">
+          <div class="container">
+            <div class="section-header">
+              <div>
+                <p class="section-header__subtitle">Explore</p>
+                <h2 class="section-header__title" id="movies-title">
+                  Popular movies
+                </h2>
+              </div>
+
+              <p class="movies-count" id="movies-count"></p>
+            </div>
+
+            <div class="message hidden" id="loading">
+              <div class="loader"></div>
+              <p>Loading movies...</p>
+            </div>
+
+            <div class="message hidden" id="error-message">
+              <h3>Something went wrong</h3>
+              <p>Please try again.</p>
+            </div>
+
+            <div class="message hidden" id="empty-message">
+              <h3>No movies found</h3>
+              <p>Try searching for another movie.</p>
+            </div>
+
+            <div class="movies-grid" id="movies"></div>
+            <div class="pagination hidden" id="pagination">
+              <button id="prev-page">← Previous</button>
+
+              <span id="page-number">1</span>
+
+              <button id="next-page">Next →</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <p>Movie App</p>
+        </div>
+      </footer>
+
+      <script src="app.js"></script>
+    </body>
+  </html>

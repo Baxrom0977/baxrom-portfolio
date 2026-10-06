@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>26 Final Javascript App</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="header">
+        <div>
+          <p class="subtitle">PRODUCTIVY APP</p>
+          <h1>My Tasks</h1>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <span class="taskCount">0</span>
+            <small>Tasks</small>
+          </div>
+          <div class="stat">
+            <span class="completedCount">0</span>
+            <small>Completed</small>
+          </div>
+        </div>
+      </div>
+      <div class="addTask">
+        <input
+          type="text"
+          class="taskInput"
+          placeholder="What do you need to do"
+        />
+        <button class="addBtn">Add Task</button>
+      </div>
+      <div class="searchBox">
+        <input type="text" class="searchInput" placeholder="Search tasks..." />
+      </div>
+      <div class="filters">
+        <button class="filterBtn active" data-filter="all">All</button>
+        <button class="filterBtn" data-filter="active">Active</button>
+        <button class="filterBtn" data-filter="completed">Completed</button>
+      </div>
+      <div class="deleteallBox">
+        <button class="deleteCompleteBtn">Delete Completed</button>
+      </div>
+      
+      <div class="tasks"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

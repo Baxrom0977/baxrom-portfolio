@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+    padding: 20px;
+
+    background: #f1f3f5;
+
+    font-family: Arial, sans-serif;
+}
+
+.length {
+    width: 100%;
+    max-width: 360px;
+    height: 46px;
+
+    padding: 0 14px;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #222222;
+
+    font-size: 16px;
+    outline: none;
+}
+
+.length:focus {
+    border-color: #333333;
+}
+
+.generate,
+.copybtn {
+    width: 100%;
+    max-width: 360px;
+    min-height: 44px;
+
+    border: none;
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.generate {
+    background: #222222;
+}
+
+.generate:hover {
+    background: #444444;
+    transform: translateY(-2px);
+}
+
+.copybtn {
+    background: #3f7d5a;
+}
+
+.copybtn:hover {
+    background: #326548;
+    transform: translateY(-2px);
+}
+
+.password {
+    width: 100%;
+    max-width: 360px;
+    min-height: 55px;
+
+    margin-top: 10px;
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #222222;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    word-break: break-all;
+    text-align: center;
+}
+
+.copy {
+    min-height: 22px;
+
+    color: #3f7d5a;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media (max-width: 420px) {
+
+    .length,
+    .generate,
+    .copybtn,
+    .password {
+        max-width: 100%;
+    }
+}

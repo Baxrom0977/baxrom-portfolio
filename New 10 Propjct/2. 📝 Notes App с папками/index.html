@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- Sidebar -->
+
+      <aside class="sidebar">
+        <div class="logo">
+          <h2>📝 Notes</h2>
+        </div>
+
+        <button class="addFolderBtn">+ New Folder</button>
+
+        <div class="folders">
+          <!-- Папки будут добавляться через JavaScript -->
+        </div>
+
+        <div class="sidebarBottom">
+          <button class="themeBtn">🌙 Theme</button>
+        </div>
+      </aside>
+
+      <!-- Main -->
+
+      <main class="main">
+        <!-- Header -->
+
+        <header class="header">
+          <div>
+            <h1 class="folderTitle">All Notes</h1>
+
+            <p class="notesCount">0 notes</p>
+          </div>
+
+          <button class="addNoteBtn">+ New Note</button>
+        </header>
+
+        <!-- Search -->
+
+        <div class="searchBox">
+          <input
+            type="text"
+            class="searchInput"
+            placeholder="Search notes..."
+          />
+        </div>
+
+        <!-- Notes -->
+
+        <div class="notesList">
+          <!-- Notes будут добавляться через JavaScript -->
+        </div>
+
+        <!-- Empty Message -->
+
+        <div class="emptyMessage">
+          <div class="emptyIcon">📝</div>
+
+          <h2>No notes yet</h2>
+
+          <p>Create your first note</p>
+        </div>
+      </main>
+
+      <!-- Note Modal -->
+
+      <div class="modal ">
+        <div class="modalContent">
+          <div class="modalHeader">
+            <h2>New Note</h2>
+
+            <button class="closeBtn">✕</button>
+          </div>
+
+          <input
+            type="text"
+            class="noteTitleInput"
+            placeholder="Note title..."
+          />
+
+          <textarea
+            class="noteTextInput"
+            placeholder="Write something..."
+          ></textarea>
+
+          <select class="folderSelect">
+            <!-- Папки будут добавляться через JavaScript -->
+          </select>
+
+          <button class="saveNoteBtn">Save Note</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

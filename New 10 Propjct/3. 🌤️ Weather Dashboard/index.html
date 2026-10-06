@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101b2d" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="index.html">atmos<span>.</span></a>
+      <span class="header-label">WEATHER DASHBOARD</span>
+      <span class="unit">°C</span>
+    </header>
+
+    <div class="dashboard">
+      <aside class="sidebar" aria-labelledby="favorites-title">
+        <h2 id="favorites-title">Избранные города</h2>
+        <p class="muted">Погода в важных для тебя местах.</p>
+
+        <!-- Позже JavaScript добавит сюда кнопки избранных городов. -->
+        <div id="favorites-list" class="favorites-list"></div>
+        <p id="favorites-empty" class="empty-message">
+          Здесь пока пусто. Найди город и добавь его в избранное.
+        </p>
+      </aside>
+
+      <main class="main">
+        <div class="page-heading">
+          <p class="eyebrow">ТВОЙ ПРОГНОЗ НА ДЕНЬ</p>
+          <h1>Обзор погоды</h1>
+        </div>
+
+        <form id="city-form" class="search-form">
+          <label for="city-input">Найти город</label>
+          <div class="search-row">
+            <input
+              id="city-input"
+              name="city"
+              type="text"
+              placeholder="Например, Ташкент"
+              autocomplete="off"
+              required
+            />
+            <button class="button button-primary" type="submit">
+              Показать погоду
+            </button>
+          </div>
+        </form>
+        <ul id="city-suggestions" hidden></ul>
+
+        <!-- Сообщения о загрузке и ошибках появятся здесь. -->
+        <p
+          id="status-message"
+          class="status-message"
+          role="status"
+          aria-live="polite"
+        ></p>
+
+        <section class="current-weather" aria-labelledby="city-name">
+          <div class="weather-heading">
+            <div>
+              <p class="eyebrow">СЕЙЧАС</p>
+              <h2 id="city-name">Твой город</h2>
+              <p id="current-date" class="weather-date">
+                Дата появится после поиска
+              </p>
+            </div>
+            <button
+              id="favorite-button"
+              class="button button-favorite"
+              type="button"
+              aria-pressed="false"
+              disabled
+            >
+              ☆ В избранное
+            </button>
+          </div>
+
+          <div class="weather-summary">
+            <div>
+              <p id="temperature" class="temperature">—°</p>
+              <p class="feels-like">
+                Ощущается как <span id="feels-like">—°</span>
+              </p>
+            </div>
+            <div class="weather-condition">
+              <span id="weather-icon" class="weather-icon" aria-hidden="true"
+                >☁</span
+              >
+              <p id="description">Нет данных</p>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="details-title">
+          <h2 id="details-title" class="section-title">Подробности сегодня</h2>
+          <div class="details-grid">
+            <article class="detail-card">
+              <h3>Ветер</h3>
+              <p>
+                <span id="wind-speed">—</span>
+                <span class="measurement">м/с</span>
+              </p>
+            </article>
+            <article class="detail-card">
+              <h3>Влажность</h3>
+              <p>
+                <span id="humidity">—</span> <span class="measurement">%</span>
+              </p>
+            </article>
+            <article class="detail-card">
+              <h3>Максимум</h3>
+              <p id="temperature-max">—°</p>
+            </article>
+            <article class="detail-card">
+              <h3>Минимум</h3>
+              <p id="temperature-min">—°</p>
+            </article>
+          </div>
+        </section>
+
+        <section aria-labelledby="forecast-title">
+          <h2 id="forecast-title" class="section-title">Прогноз на 7 дней</h2>
+          <!-- Карточки прогноза создадим из ответа API. -->
+          <div id="forecast-list" class="forecast-list"></div>
+          <p id="forecast-empty" class="empty-message">
+            Прогноз появится после выбора города.
+          </p>
+        </section>
+
+        <footer class="footer">Weather Dashboard · Учебный проект</footer>
+      </main>
+    </div>
+  </body>
+</html>

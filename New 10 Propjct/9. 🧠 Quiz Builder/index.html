@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Quiz Builder</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <header class="header">
+        <div>
+          <p class="header__label">Create & Learn</p>
+          <h1>Quiz Builder</h1>
+
+          <p class="header__description">
+            Create your own quiz, save it and test your knowledge.
+          </p>
+        </div>
+
+        <div class="header__actions">
+          <button class="button button--secondary" id="saved-quizzes-button">
+            Saved quizzes
+          </button>
+
+          <button class="button button--primary" id="new-quiz-button">
+            + New quiz
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <!-- EMPTY STATE -->
+        <section class="empty-state" id="empty-state">
+          <div class="empty-state__icon">?</div>
+
+          <h2>Create your first quiz</h2>
+
+          <p>
+            Add your own questions, answers and choose the correct answer.
+          </p>
+
+          <button class="button button--primary" id="empty-create-button">
+            Create quiz
+          </button>
+        </section>
+
+        <!-- QUIZ BUILDER -->
+        <section class="builder hidden" id="quiz-builder">
+          <div class="builder__top">
+            <div>
+              <p class="section-label">Quiz editor</p>
+              <h2>Build your quiz</h2>
+            </div>
+
+            <span class="question-counter" id="question-counter">
+              0 questions
+            </span>
+          </div>
+
+          <div class="quiz-info">
+            <div class="form-group">
+              <label for="quiz-title">Quiz title</label>
+
+              <input
+                type="text"
+                id="quiz-title"
+                placeholder="Example: JavaScript Basics"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="quiz-description">Description</label>
+
+              <textarea
+                id="quiz-description"
+                rows="3"
+                placeholder="What is this quiz about?"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- QUESTION FORM -->
+          <div class="question-form-card">
+            <div class="question-form-card__header">
+              <div>
+                <p class="section-label">Question</p>
+                <h3>Add a new question</h3>
+              </div>
+            </div>
+
+            <form id="question-form">
+              <div class="form-group">
+                <label for="question-text">Question</label>
+
+                <input
+                  type="text"
+                  id="question-text"
+                  placeholder="Enter your question"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="answers">
+                <p class="answers__title">
+                  Answers
+                  <span>Select the correct answer</span>
+                </p>
+
+                <!-- ANSWER 1 -->
+                <div class="answer-row">
+                  <input
+                    class="answer-radio"
+                    type="radio"
+                    name="correct-answer"
+                    value="0"
+                  />
+
+                  <input
+                    class="answer-input"
+                    id="answer-1"
+                    type="text"
+                    placeholder="Answer 1"
+                    autocomplete="off"
+                  />
+                </div>
+
+                <!-- ANSWER 2 -->
+                <div class="answer-row">
+                  <input
+                    class="answer-radio"
+                    type="radio"
+                    name="correct-answer"
+                    value="1"
+                  />
+
+                  <input
+                    class="answer-input"
+                    id="answer-2"
+                    type="text"
+                    placeholder="Answer 2"
+                    autocomplete="off"
+                  />
+                </div>
+
+                <!-- ANSWER 3 -->
+                <div class="answer-row">
+                  <input
+                    class="answer-radio"
+                    type="radio"
+                    name="correct-answer"
+                    value="2"
+                  />
+
+                  <input
+                    class="answer-input"
+                    id="answer-3"
+                    type="text"
+                    placeholder="Answer 3"
+                    autocomplete="off"
+                  />
+                </div>
+
+                <!-- ANSWER 4 -->
+                <div class="answer-row">
+                  <input
+                    class="answer-radio"
+                    type="radio"
+                    name="correct-answer"
+                    value="3"
+                  />
+
+                  <input
+                    class="answer-input"
+                    id="answer-4"
+                    type="text"
+                    placeholder="Answer 4"
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="button button--primary question-form__button"
+                type="submit"
+              >
+                + Add question
+              </button>
+            </form>
+          </div>
+
+          <!-- CREATED QUESTIONS -->
+          <div class="questions-section">
+            <div class="questions-section__header">
+              <div>
+                <p class="section-label">Questions</p>
+                <h2>Your questions</h2>
+              </div>
+            </div>
+
+            <div class="questions-list" id="questions-list"></div>
+
+            <div class="questions-empty" id="questions-empty">
+              No questions yet.
+            </div>
+          </div>
+
+          <div class="builder__footer">
+            <button class="button button--danger" id="cancel-quiz-button">
+              Cancel
+            </button>
+
+            <div class="builder__footer-right">
+              <button class="button button--secondary" id="preview-quiz-button">
+                Preview
+              </button>
+
+              <button class="button button--primary" id="save-quiz-button">
+                Save quiz
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- QUIZ PLAYER -->
+        <section class="player hidden" id="quiz-player">
+          <div class="player__header">
+            <div>
+              <p class="section-label">Quiz</p>
+              <h2 id="player-title">Quiz title</h2>
+            </div>
+
+            <span id="player-progress">Question 1 of 5</span>
+          </div>
+
+          <div class="progress">
+            <div class="progress__bar" id="progress-bar"></div>
+          </div>
+
+          <div class="player-card">
+            <h3 id="player-question">Question text</h3>
+
+            <div class="player-answers" id="player-answers"></div>
+          </div>
+
+          <div class="player__footer">
+            <button class="button button--secondary" id="exit-quiz-button">
+              Exit
+            </button>
+
+            <button class="button button--primary" id="next-question-button">
+              Next question
+            </button>
+          </div>
+        </section>
+
+        <!-- RESULT -->
+        <section class="result hidden" id="quiz-result">
+          <div class="result__icon">✓</div>
+
+          <p class="section-label">Quiz completed</p>
+
+          <h2>Your result</h2>
+
+          <p class="result__score" id="result-score">
+            0 / 0
+          </p>
+
+          <p class="result__message" id="result-message">
+            Good job!
+          </p>
+
+          <div class="result__actions">
+            <button class="button button--secondary" id="back-home-button">
+              Back
+            </button>
+
+            <button class="button button--primary" id="restart-quiz-button">
+              Try again
+            </button>
+          </div>
+        </section>
+
+        <!-- SAVED QUIZZES -->
+        <section class="saved hidden" id="saved-quizzes">
+          <div class="saved__header">
+            <div>
+              <p class="section-label">Library</p>
+              <h2>Saved quizzes</h2>
+            </div>
+
+            <button class="button button--secondary" id="close-saved-button">
+              Close
+            </button>
+          </div>
+
+          <div class="saved__list" id="saved-quizzes-list"></div>
+
+          <div class="saved__empty hidden" id="saved-empty">
+            You don't have any saved quizzes yet.
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

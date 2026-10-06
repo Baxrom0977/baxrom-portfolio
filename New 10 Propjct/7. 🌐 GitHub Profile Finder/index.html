@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>GitHub Profile Finder</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo"> GitHub<span>Finder</span> </a>
+
+        <p class="header__text">Find GitHub developers</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__content">
+            <p class="hero__subtitle">GitHub Profile Finder</p>
+
+            <h1 class="hero__title">
+              Find developers
+              <span>around the world</span>
+            </h1>
+
+            <p class="hero__description">
+              Search for a GitHub username and explore profile information,
+              statistics and public repositories.
+            </p>
+
+            <form class="search" id="search-form">
+              <input
+                type="search"
+                id="search-input"
+                class="search__input"
+                placeholder="Enter GitHub username..."
+                autocomplete="off"
+              />
+
+              <button class="search__button" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="result-section">
+        <div class="container">
+          <div class="message hidden" id="loading">
+            <div class="loader"></div>
+            <p>Loading profile...</p>
+          </div>
+
+          <div class="message hidden" id="error-message">
+            <h3>User not found</h3>
+            <p>Please check the username and try again.</p>
+          </div>
+
+          <div class="profile hidden" id="profile">
+            <div class="profile__top">
+              <div class="profile__avatar-wrapper">
+                <img
+                  class="profile__avatar"
+                  id="profile-avatar"
+                  src=""
+                  alt="GitHub user avatar"
+                />
+              </div>
+
+              <div class="profile__info">
+                <p class="profile__label">GitHub Profile</p>
+
+                <h2 class="profile__name" id="profile-name"></h2>
+
+                <p class="profile__username" id="profile-username"></p>
+
+                <p class="profile__bio" id="profile-bio"></p>
+
+                <div class="profile__details">
+                  <p id="profile-location"></p>
+                  <p id="profile-company"></p>
+                  <a
+                    id="profile-blog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  ></a>
+                </div>
+
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="profile__link"
+                  id="profile-link"
+                >
+                  Open GitHub profile
+                </a>
+              </div>
+            </div>
+
+            <div class="stats">
+              <div class="stat">
+                <span class="stat__value" id="repos-count">0</span>
+                <span class="stat__label">Repositories</span>
+              </div>
+
+              <div class="stat">
+                <span class="stat__value" id="followers-count">0</span>
+                <span class="stat__label">Followers</span>
+              </div>
+
+              <div class="stat">
+                <span class="stat__value" id="following-count">0</span>
+                <span class="stat__label">Following</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="repositories hidden" id="repositories-section">
+            <div class="section-header">
+              <div>
+                <p class="section-header__subtitle">Projects</p>
+
+                <h2 class="section-header__title">Public repositories</h2>
+              </div>
+
+              <span class="repositories-count" id="repositories-count"></span>
+            </div>
+
+            <div class="repositories__grid" id="repositories"></div>
+            <div class="pagination hidden" id="pagination">
+              <button id="prev-page">← Previous</button>
+
+              <span id="page-number">Page 1</span>
+
+              <button id="next-page">Next →</button>
+            </div>
+
+            <div class="message hidden" id="repositories-empty">
+              <h3>No repositories</h3>
+              <p>This user has no public repositories.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>GitHub Profile Finder</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

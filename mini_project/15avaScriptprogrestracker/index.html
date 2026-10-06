@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Трекер прогресса JavaScript</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Прогресс JavaScript</h1>
+
+      <div class="form">
+        <input
+          class="projectInput"
+          type="text"
+          placeholder="Введите название проекта"
+        />
+
+        <button class="addBtn" type="button">Добавить проект</button>
+      </div>
+
+      <div class="form">
+        <div class="progressBar">
+          <p class="percent"></p>
+
+          <div class="progressTrack">
+            <div class="progressFill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="formStatus">
+        <p class="total"></p>
+        <p class="done"></p>
+        <p class="progress"></p>
+        <p class="notStarted"></p>
+      </div>
+
+      <div class="projectList"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

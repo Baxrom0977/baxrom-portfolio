@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="page.mini.title">Mini Projects — Baxrom Developer</title>
+    <link rel="icon" href="./img/fovicon.svg" type="image/svg+xml" />
+
+    <meta
+      name="description"
+      data-i18n-content="page.mini.description"
+      content="JavaScript mini projects by Baxrom focused on DOM, APIs, localStorage and interactive interfaces."
+    />
+
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/media.css" />
+    <link rel="stylesheet" href="./style/mini-projects.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <a href="./index.html" class="logo">baxrom<span>.</span></a>
+
+        <div class="header__right">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li>
+                <a href="./about.html" class="list__link" data-i18n="nav.about">
+                  Обо мне
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="./project.html"
+                  class="list__link"
+                  data-i18n="nav.projects"
+                >
+                  Проекты
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="./mini-projects.html"
+                  class="list__link"
+                  data-i18n="nav.miniProjects"
+                >
+                  Мини-проекты
+                </a>
+              </li>
+
+              <li>
+                <a href="./my-ui.html" class="list__link" data-i18n="nav.myUi">
+                  My UI
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="./contact.html"
+                  class="list__link"
+                  data-i18n="nav.contact"
+                >
+                  Контакты
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav__controls">
+              <div class="languages">
+                <button
+                  class="language__button active"
+                  data-lang="ru"
+                  type="button"
+                >
+                  RU
+                </button>
+
+                <button class="language__button" data-lang="uz" type="button">
+                  UZ
+                </button>
+
+                <button class="language__button" data-lang="en" type="button">
+                  EN
+                </button>
+              </div>
+
+              <button
+                class="theme-toggle"
+                id="theme-toggle"
+                type="button"
+                data-i18n-aria-label="common.theme"
+                aria-label="Сменить тему"
+              >
+                <span class="theme-toggle__icon">☀</span>
+                <span class="theme-toggle__thumb"></span>
+                <span class="theme-toggle__icon">☾</span>
+              </button>
+            </div>
+          </nav>
+
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            data-i18n-aria-label="common.openMenu"
+            aria-label="Открыть меню"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="mini-page-hero">
+        <div class="container">
+          <a
+            href="./index.html"
+            class="mini-page-hero__back"
+            data-i18n="miniPage.back"
+          >
+            ← На главную
+          </a>
+          <div class="mini-page-hero__content">
+            <p class="mini-page-hero__eyebrow" data-i18n="miniPage.eyebrow">
+              MINI PROJECTS
+            </p>
+
+            <h1 class="mini-page-hero__title" data-i18n="miniPage.title">
+              Мои мини-проекты
+            </h1>
+
+            <p
+              class="mini-page-hero__description"
+              data-i18n="miniPage.description"
+            >
+              Небольшие проекты, через которые я практикую JavaScript, работу с
+              DOM, API, localStorage и создание интерактивных интерфейсов.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MINI PROJECTS -->
+      <section class="mini-page-projects">
+        <div class="container">
+          <div class="mini-page-projects__header">
+            <p
+              class="mini-page-projects__eyebrow"
+              data-i18n="miniPage.projectsLabel"
+            >
+              JAVASCRIPT PRACTICE
+            </p>
+
+            <h2
+              class="mini-page-projects__title"
+              data-i18n="miniPage.projectsTitle"
+            >
+              Практические проекты
+            </h2>
+          </div>
+
+          <div class="mini-page-projects__grid">
+            <!-- 01 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">01</span>
+
+              <h3 class="mini-page-card__title">Advanced Countdown Timer</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.countdown.description"
+              >
+                Таймер обратного отсчёта с запуском, паузой, продолжением,
+                сбросом и проверкой времени.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Timers</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/01AdvancedCountdownTimer/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                >
+                  GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- 02 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">02</span>
+
+              <h3 class="mini-page-card__title">Quiz App</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.quiz.description"
+              >
+                Викторина с вопросами, проверкой ответов, подсчётом результата и
+                перезапуском теста.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Arrays</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/02QuizApp/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                >
+                  GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- 03 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">03</span>
+
+              <h3 class="mini-page-card__title">Weather App</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.weather.description"
+              >
+                Поиск погоды по городу с температурой, ветром и состоянием
+                погоды через API.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>API</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/03WeatherApp/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                >
+                  GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- 04 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">04</span>
+
+              <h3 class="mini-page-card__title">Image Slider</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.slider.description"
+              >
+                Слайдер изображений с переключением, автопрокруткой, паузой и
+                счётчиком.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>DOM</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/04Imageslider/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                >
+                  GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- 05 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">05</span>
+
+              <h3 class="mini-page-card__title">Password Generator</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.password.description"
+              >
+                Генератор случайных паролей с выбором длины и возможностью
+                копирования результата.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/05Randompasword/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                >
+                  GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- 06 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">06</span>
+
+              <h3 class="mini-page-card__title">Burger Builder</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.burger.description"
+              >
+                Конструктор бургера с добавлением и удалением ингредиентов и
+                подсчётом общей стоимости.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Arrays</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/06Burgerbuilder/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                >
+                  GitHub
+                </a>
+              </div>
+            </article>
+            <!-- 07 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">07</span>
+
+              <h3 class="mini-page-card__title">Technology Tracker</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.technology.description"
+              >
+                Трекер технологий с добавлением, удалением, статусом изучения,
+                статистикой и сохранением данных.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>LocalStorage</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/07TechnologyTracker/INDEX.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <!-- 08 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">08</span>
+
+              <h3 class="mini-page-card__title">Book Library</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.books.description"
+              >
+                Библиотека книг с добавлением, удалением, поиском по названию и
+                автору и сохранением данных.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>LocalStorage</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/08Booklibrary/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <!-- 09 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">09</span>
+
+              <h3 class="mini-page-card__title">Currency Converter</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.currency.description"
+              >
+                Конвертер валют с выбором исходной и конечной валюты и расчётом
+                итоговой суммы.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Math</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/09CurrencyConvertor/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <!-- 10 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">10</span>
+
+              <h3 class="mini-page-card__title">Markdown Notes</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.markdown.description"
+              >
+                Приложение заметок с редактированием, поиском, localStorage и
+                простой поддержкой Markdown.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>LocalStorage</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/10Markdownnotes/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <!-- 11 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">11</span>
+
+              <h3 class="mini-page-card__title">Memory Card Game</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.memory.description"
+              >
+                Игра на память с открытием карточек, поиском одинаковых пар и
+                подсчётом игрового прогресса.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Game Logic</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/11Memorycardgame/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <!-- 12 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">12</span>
+
+              <h3 class="mini-page-card__title">Number Guessing Game</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.guess.description"
+              >
+                Игра, в которой пользователь пытается угадать случайно
+                сгенерированное число по подсказкам.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Logic</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/12Numberguessinggame/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <!-- 13 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">13</span>
+
+              <h3 class="mini-page-card__title">Calendar App</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.calendar.description"
+              >
+                Календарное приложение с отображением дат, переключением месяцев
+                и работой с объектом Date.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Date</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/13Calendarapp/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <!-- 14 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">14</span>
+
+              <h3 class="mini-page-card__title">Chat App</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.chat.description"
+              >
+                Интерфейс чата с отправкой сообщений и динамическим отображением
+                переписки.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>DOM</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/14Chatapp/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <!-- 15 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">15</span>
+
+              <h3 class="mini-page-card__title">JavaScript Progress Tracker</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.progress.description"
+              >
+                Трекер учебных проектов со статусами, статистикой и визуальным
+                прогресс-баром.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>LocalStorage</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/15avaScriptprogrestracker/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <!-- 16 -->
+            <article class="mini-page-card">
+              <span class="mini-page-card__number">16</span>
+
+              <h3 class="mini-page-card__title">Advanced Task Manager</h3>
+
+              <p
+                class="mini-page-card__description"
+                data-i18n="miniPage.tasks.description"
+              >
+                Менеджер задач с поиском, фильтрацией, редактированием,
+                статусами, статистикой и localStorage.
+              </p>
+
+              <div class="mini-page-card__stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>LocalStorage</span>
+              </div>
+
+              <div class="mini-page-card__actions">
+                <a
+                  href="./mini_project/16Finaljavascriptapp/index.html"
+                  class="mini-page-card__link"
+                  data-i18n="miniPage.view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Посмотреть →
+                </a>
+                <a
+                  href="https://github.com/Baxrom0977"
+                  class="mini-page-card__github"
+                  >GitHub</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="mini-page-cta">
+        <div class="container">
+          <div class="mini-page-cta__inner">
+            <div class="mini-page-cta__content">
+              <p class="mini-page-cta__eyebrow" data-i18n="miniPage.ctaLabel">
+                MORE PROJECTS
+              </p>
+
+              <h2 class="mini-page-cta__title" data-i18n="miniPage.ctaTitle">
+                Продолжаю создавать новые проекты
+              </h2>
+
+              <p
+                class="mini-page-cta__description"
+                data-i18n="miniPage.ctaDescription"
+              >
+                Посмотрите мои более крупные проекты с API, localStorage и более
+                сложной JavaScript-логикой.
+              </p>
+            </div>
+
+            <a
+              href="./project.html"
+              class="mini-page-cta__button"
+              data-i18n="miniPage.ctaButton"
+            >
+              Основные проекты →
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a href="./index.html" class="footer__logo"> baxrom<span>.</span> </a>
+
+          <p class="footer__text" data-i18n="common.role">Frontend Developer</p>
+
+          <div class="footer__links">
+            <a href="./project.html" data-i18n="nav.projects">Проекты </a>
+
+            <a href="./mini-projects.html" data-i18n="nav.miniProjects">
+              Мини-проекты
+            </a>
+
+            <a href="./my-ui.html" data-i18n="nav.myUi"> My UI </a>
+
+            <a href="./about.html" data-i18n="nav.about"> Обо мне </a>
+
+            <a href="./contact.html" data-i18n="nav.contact"> Контакты </a>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© 2026 Baxrom Developer</p>
+
+          <a href="#" class="footer__top" data-i18n="footer.top"> Наверх ↑ </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script/i18n.js"></script>
+    <script src="./script/app.js"></script>
+  </body>
+</html>

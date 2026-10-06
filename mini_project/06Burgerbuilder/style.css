@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    padding: 40px 20px;
+
+    background: #f4f1ec;
+    color: #222222;
+
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    font-size: 36px;
+}
+
+h2 {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 30px auto 15px;
+
+    font-size: 22px;
+}
+
+.ingredientsList,
+.burgerList {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    display: grid;
+    gap: 10px;
+}
+
+.ingredientsList>div,
+.burgerList>div {
+    padding: 14px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+.ingredientsList p,
+.burgerList p {
+    font-size: 15px;
+}
+
+.ingredientsList button,
+.burgerList button {
+    min-width: 90px;
+    min-height: 38px;
+
+    border: none;
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.ingredientsList button {
+    background: #3f7d5a;
+}
+
+.burgerList button {
+    background: #c8564f;
+}
+
+.ingredientsList button:hover,
+.burgerList button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.total {
+    margin-top: 30px;
+
+    text-align: center;
+
+    font-size: 26px;
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .ingredientsList>div,
+    .burgerList>div {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ingredientsList button,
+    .burgerList button {
+        width: 100%;
+    }
+}
