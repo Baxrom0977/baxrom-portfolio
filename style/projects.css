@@ -135,26 +135,18 @@
 
 }
 
-/* 01 — появляется слева */
-.featured-project:nth-child(1) {
+.featured-project:nth-child(odd) {
     transform: translateX(-120px);
 }
 
-/* 02 — появляется справа */
-.featured-project:nth-child(2) {
+.featured-project:nth-child(even) {
     transform: translateX(120px);
-}
-
-/* 03 — появляется слева */
-.featured-project:nth-child(3) {
-    transform: translateX(-120px);
 }
 
 .featured-project.show {
     opacity: 1;
     transform: translateX(0);
 }
-
 
 .featured-project__image {
     height: 430px;
@@ -545,12 +537,11 @@
         padding: 65px 0;
     }
 
-    .featured-project:nth-child(1),
-    .featured-project:nth-child(3) {
+    .featured-project:nth-child(odd) {
         transform: translateX(-45px);
     }
 
-    .featured-project:nth-child(2) {
+    .featured-project:nth-child(even) {
         transform: translateX(45px);
     }
 
