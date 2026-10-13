@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Project Tracker Dashboard for managing frontend projects"
+    />
+
+    <title>Project Tracker Dashboard</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <div>
+          <p class="header__eyebrow">Developer Workspace</p>
+
+          <h1 class="logo">Project Tracker</h1>
+        </div>
+
+        <button class="add-project-btn" id="add-project-btn">
+          <span>+</span>
+          Add Project
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <!-- DASHBOARD TITLE -->
+
+        <section class="dashboard-heading">
+          <div>
+            <p class="section-label">Overview</p>
+
+            <h2>My Projects</h2>
+
+            <p>Track your frontend projects, technologies and progress.</p>
+          </div>
+
+          <div class="progress-box">
+            <div class="progress-box__top">
+              <span>Overall progress</span>
+
+              <strong id="progress-percent">0%</strong>
+            </div>
+
+            <div class="progress">
+              <div class="progress__bar" id="progress-bar"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STATISTICS -->
+
+        <section class="stats">
+          <article class="stat-card">
+            <div class="stat-card__icon">📁</div>
+
+            <div>
+              <span>Total Projects</span>
+
+              <strong id="total-projects">0</strong>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-card__icon">✓</div>
+
+            <div>
+              <span>Completed</span>
+
+              <strong id="completed-projects">0</strong>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-card__icon">⚡</div>
+
+            <div>
+              <span>In Progress</span>
+
+              <strong id="progress-projects">0</strong>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-card__icon">◷</div>
+
+            <div>
+              <span>Planned</span>
+
+              <strong id="planned-projects">0</strong>
+            </div>
+          </article>
+        </section>
+
+        <!-- CONTROLS -->
+
+        <section class="controls">
+          <div class="search">
+            <span class="search__icon">⌕</span>
+
+            <input
+              type="search"
+              id="search-input"
+              placeholder="Search projects..."
+            />
+          </div>
+
+          <div class="filters">
+            <select id="status-filter">
+              <option value="all">All statuses</option>
+
+              <option value="completed">Completed</option>
+
+              <option value="progress">In Progress</option>
+
+              <option value="planned">Planned</option>
+            </select>
+
+            <select id="technology-filter">
+              <option value="all">All technologies</option>
+            </select>
+
+            <select id="sort-select">
+              <option value="newest">Newest</option>
+
+              <option value="oldest">Oldest</option>
+
+              <option value="name">Name A-Z</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+
+        <section class="projects-section">
+          <div class="projects-section__heading">
+            <div>
+              <p class="section-label">Portfolio</p>
+
+              <h2>Projects</h2>
+            </div>
+
+            <span class="projects-count" id="projects-count"> 0 projects </span>
+          </div>
+
+          <div class="projects" id="projects">
+            <!-- JavaScript will create project cards here -->
+          </div>
+
+          <!-- EMPTY STATE -->
+
+          <div class="empty-state" id="empty-state">
+            <div class="empty-state__icon">🚀</div>
+
+            <h3>No projects yet</h3>
+
+            <p>Add your first project and start tracking your progress.</p>
+
+            <button class="empty-add-btn" id="empty-add-btn">
+              + Add your first project
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- MODAL -->
+
+    <div class="modal" id="project-modal">
+      <div class="modal__overlay"></div>
+
+      <div class="modal__content">
+        <div class="modal__header">
+          <div>
+            <p class="section-label">Project</p>
+
+            <h2 id="modal-title">Add Project</h2>
+          </div>
+
+          <button
+            class="modal__close"
+            id="modal-close"
+            aria-label="Close modal"
+          >
+            ×
+          </button>
+        </div>
+
+        <form class="project-form" id="project-form">
+          <input type="hidden" id="project-id" />
+
+          <div class="form-group">
+            <label for="project-title"> Project name </label>
+
+            <input type="text" id="project-title" placeholder="Movie App" />
+          </div>
+
+          <div class="form-group">
+            <label for="project-description"> Description </label>
+
+            <textarea
+              id="project-description"
+              placeholder="Short project description..."
+            ></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="project-status"> Status </label>
+
+              <select id="project-status">
+                <option value="planned">Planned</option>
+
+                <option value="progress">In Progress</option>
+
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="project-date"> Date </label>
+
+              <input type="date" id="project-date" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="project-technologies"> Technologies </label>
+
+            <input
+              type="text"
+              id="project-technologies"
+              placeholder="HTML, CSS, JavaScript"
+            />
+
+            <small> Separate technologies with commas. </small>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="cancel-btn" id="cancel-btn">
+              Cancel
+            </button>
+
+            <button type="submit" class="save-btn">Save Project</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

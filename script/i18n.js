@@ -288,6 +288,9 @@ const translations = {
 
     "contactPage.bottom":
       "Я открыт к интересным идеям, проектам и новым возможностям.",
+    "projectsPage.tracker.title": "Трекер проектов",
+    "projectsPage.tracker.description":
+      "Панель управления frontend-проектами с поиском, фильтрами, сортировкой, статистикой, отслеживанием прогресса и LocalStorage.",
   },
 
   uz: {
@@ -582,6 +585,9 @@ const translations = {
 
     "contactPage.bottom":
       "Men qiziqarli g‘oyalar, loyihalar va yangi imkoniyatlarga ochiqman.",
+    "projectsPage.tracker.title": "Loyihalar trekeri",
+    "projectsPage.tracker.description":
+      "Frontend loyihalarni qidirish, filtrlash, saralash, statistika, progress va LocalStorage orqali boshqarish paneli.",
   },
 
   en: {
@@ -874,6 +880,9 @@ const translations = {
 
     "contactPage.bottom":
       "I'm open to interesting ideas, projects and new opportunities.",
+    "projectsPage.tracker.title": "Project Tracker Dashboard",
+    "projectsPage.tracker.description":
+      "A dashboard for managing frontend projects with search, filters, sorting, statistics, progress tracking and local storage.",
   },
 };
 
